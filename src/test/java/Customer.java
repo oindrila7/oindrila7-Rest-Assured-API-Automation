@@ -103,6 +103,10 @@ public class Customer {
 
         JsonPath ath = res.jsonPath();
         ID=(int)Math.floor(Math.random()*(999999-100000)+1);
+        Name = ath.get("name");
+        email = ath.get("email_u");
+        email2 = email + "@test.com";
+        phone_number = ath.get("phone_w");
         Utils.setEnvVariable("id",ID.toString());
         Utils.setEnvVariable("name", Name);
         Utils.setEnvVariable("email", email2);
